@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Portofolio - {Title}</title>
+ 
+<!-- Font -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="{Favicon}">
+ 
+<!-- Style My-Tool-Tips by Malihu -->
+ 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="http://static.tumblr.com/5ojoydj/p9wmmzopi/jquery.style-my-tooltips.js"></script>
+<script src="http://static.tumblr.com/5ojoydj/En2mmzorm/style-my-tooltips.css"></script>
+<script>
+     (function($){
+         $(document).ready(function(){
+             $("[title]").style_my_tooltips({
+    tip_follows_cursor:true,
+    tip_delay_time:200,
+    tip_fade_speed:300,
+    attribute:"title"
+});
+         });
+     })(jQuery);
+</script>
+ 
+<style type="text/css">
+ 
+/* ------ GENERAL ------ */
+body {
+        margin:0;
+        padding:0;
+        background-color:#f6f6f6;
+        background-image:url('http://25.media.tumblr.com/tumblr_ltqq73Kh5g1qhvdofo6_250.png');
+        background-position: fixed;
+        background-attachment:fixed;
+        background-repeat:repeat;
+}
+ 
+html {
+        margin:0;
+        padding:0;
+    }
+ 
+/* ------ S-M-T TOOLTIP ------ */
+#s-m-t-tooltip{
+      width:auto;
+      z-index:10;
+      margin:24px 14px 7px 12px;
+      padding:8px;
+      background:#111;
+      font-family:'Open Sans';
+      font-size:12px;
+      line-height:16px;
+      color:#fff;
+      text-transform:uppercase;
+      border:1px solid #fff;
+      z-index:9999999;
+ }
+ 
+/* ------ SCROLLBAR ------ */
+::-webkit-scrollbar {width: 6px;}
+ 
+::-webkit-scrollbar-track-piece
+{background-color:#eee;}
+ 
+::-webkit-scrollbar-thumb:vertical
+{width:6px;
+background-color:#111;}
+ 
+/* ------ TOP BAR ------ */
+#top_menu {
+        position:fixed;
+        left:0;
+        top:0;
+        width:100%;
+        text-align:center;
+        padding:20px 0 20px 0;
+        background-color:#111;
+        color:white;
+        font-family:'Open Sans';
+        font-size:25px;
+        z-index:999;
+}
+ 
+/* ------ CONTENT ------ */
+#content_holder {
+        margin:-100px auto 50px auto;
+        background-color:#ddd; /* CONTENT'S BACKGROUND */
+        padding:0 0 15px 0;
+        width:800px;
+        height:relative;
+        overflow:hidden;
+}
+ 
+/* ------ IMAGE CONTENT ------ */
+.image_content {
+        display:inline-block;
+        width:230px;
+        height:345px;
+        border:2px solid #fff; /* BORDER IMAGE */
+        margin:20px 0 0 22px;
+        overflow:hidden;
+        cursor:crosshair;
+}
+ 
+/* ------ NAME CONTENT ------ */
+.name_content {
+        position:absolute;
+        width:230px;
+        color:transparent;
+        background:#888; /* BACKGROUND COLOR  */
+        font-family:'Open Sans', sans-serif;
+        text-align:center;
+        margin:-160px 0 0 0px;
+        padding:0;
+        opacity:0;
+        cursor:crosshaie;
+        -webkit-transition: all 0.5s ease-in;
+        -moz-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+}
+ 
+ 
+.image_content:hover .name_content {
+        opacity:1;
+        color:#fff; /* COLOR */
+        width:230px;
+        margin:-350px 0 0 0;
+        padding:163px 0 160px 0;
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        -o-transition: all 0.4s ease-out;
+}
+ 
+/* ------ CIRCLE ------ */
+.circle-1 , .circle-2, .circle-3 {
+        position:absolute;
+        background:#555; /* COLOR */
+        opacity:0;
+        width:18px;
+        height:18px;
+        border-radius:100%;
+        -moz-border-radius:100%;
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        -o-transition: all 0.4s ease-in;
+}
+ 
+.circle-1 {
+        margin:-135px 0 0 15px;
+}
+ 
+.circle-2 {
+        margin:-105px 0 0 105px;
+}
+ 
+.circle-3 {
+        margin:-135px 0 0 195px;
+}
+ 
+.image_content:hover .circle-1 {
+        opacity:1;
+        margin:-250px 0 0 75px;
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        -o-transition: all 0.4s ease-out;
+}
+ 
+.image_content:hover .circle-2 {
+        opacity:1;
+        margin:-250px 0 0 105px;
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        -o-transition: all 0.4s ease-out;
+}
+ 
+.image_content:hover .circle-3 {
+        opacity:1;
+        margin:-250px 0 0 135px;
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        -o-transition: all 0.4s ease-out;
+}
+ 
+/* ------ ARROW ------ */
+.arrow {
+        position:absolute;
+        opacity:0;
+        margin:-155px 0 0 90px;
+        background:rgba(0,0,0,0.5);
+        width:50px;
+        height:50px;
+        border-radius:100%;
+        -moz-border-radius:100%;
+        -webkit-transition: all 0.4s ease-in;
+        -moz-transition: all 0.4s ease-in;
+        -o-transition: all 0.4s ease-in;
+}
+ 
+.arrow:hover {
+        background-color:#111;
+}
+ 
+.arrow img {
+        width:50px;
+        height:50px;
+}
+ 
+.image_content:hover .arrow {
+        opacity:1;
+        margin:-105px 0 0 90px;
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        -o-transition: all 0.4s ease-out;
+}
+ 
+/* ------ MULTI-COLORED TOPBAR BY EXCOLO@TUMBLR ------ */
+ 
+#colour-bar {
+       position:fixed;
+       left:0;
+       top:74px;
+       width:100%;
+       height:3px;
+       overflow:hidden;
+       z-index:99999999999;
+}
+ 
+.colour-part {
+        width:10%;
+        height:100%;
+        float:left;
+}
+ 
+#position_menu {
+        width:400px;
+        margin:220px auto;
+        z-index:99999;
+}
+ 
+.menu_c {
+        display:inline-block;
+        width:30px;
+        height:30px;
+        margin:0 0 0 50px;
+        -moz-border-radius:100%;
+        border-radius:100%;
+}
+ 
+.line_c {
+        position:absolute;
+        margin:-20px 0 0 -10px;
+        width:400px;
+        height:2px;
+        background-color:#bbb;
+        z-index:-9;
+}
+ 
+</style>
+</head>
+<body>
+ 
+<div id="top_menu">My Portfolio</div>
+ 
+<!-- multi-colored by Excolo
+ 
+NOTE: Just change the color with your liking
+ 
+-->
+<div id="colour-bar">
+    <div class="colour-part" style="background-color:#ca4a4a;"></div>
+    <div class="colour-part" style="background-color:#de8110;"></div>
+    <div class="colour-part" style="background-color:#444;"></div>
+    <div class="colour-part" style="background-color:#47b847;"></div>
+    <div class="colour-part" style="background-color:#5491cf;"></div>
+    <div class="colour-part" style="background-color:#ca4a4a;"></div>
+    <div class="colour-part" style="background-color:#de8110;"></div>
+    <div class="colour-part" style="background-color:#444;"></div>
+    <div class="colour-part" style="background-color:#47b847;"></div>
+    <div class="colour-part" style="background-color:#5491cf;"></div>
+</div>
+ 
+ 
+<div id="position_menu">
+    <!-- CIRCLE MENU -->
+    <a title="home" href="/" class="menu_c" style="background-color:#ca4a4a;"></a>
+    <a title="ask" href="/ask" class="menu_c" style="background-color:#de8110;"></a>
+    <a title="history" href="/archive" class="menu_c" style="background-color:#47b847;"></a>
+    <a title="&copy; Fukuo" href="http://fukuo.tumblr.com/" class="menu_c" style="background-color:#5491cf;"></a>
+ 
+    <!-- LINE -->
+    <div class="line_c"></div>
+</div>
+ 
+<!--
+ 
+NOTE:
+* Replace the URL image with your own. The size is 230px x 345px!
+** Under <div class="name_content">
+   i.e YOU & I, replace it with your own name
+*** And lastly, replace the URL '#' - under <! -- arrow -- > - with your URL.
+ 
+-->
+ 
+<!-- CONTENT -->
+<div id="content_holder"><!-- begin -->
+ <!-- content 01 ... -->
+ <div class="image_content">
+    <img src="http://static.tumblr.com/5ojoydj/0SDn3no5i/image_5.png">
+        <div class="name_content">
+           YOU & I
+           </div>
+           <div class="circle-1"></div>
+           <div class="circle-2"></div>
+           <div class="circle-3"></div>
+      <!-- arrow -->
+      <a href="#" class="arrow"><img src="http://static.tumblr.com/5ojoydj/85En3nom4/arrow-fukuo.png"></a>
+ </div>
+ 
+ <!-- content 02 ... -->
+ <div class="image_content">
+    <img src="http://static.tumblr.com/5ojoydj/c5mn3ngli/image_2.png">
+       <div class="name_content">
+       MUSIC
+       </div>
+       <div class="circle-1"></div>
+       <div class="circle-2"></div>
+       <div class="circle-3"></div>
+<!-- arrow -->
+      <a href="#" class="arrow"><img src="http://static.tumblr.com/5ojoydj/85En3nom4/arrow-fukuo.png"></a>
+ </div>
+ 
+ <!-- content 03 ... -->
+ <div class="image_content">
+    <img src="http://static.tumblr.com/5ojoydj/XFpn3ngq8/image_3.png">
+       <div class="name_content">
+       DESIGN
+       </div>
+       <div class="circle-1"></div>
+       <div class="circle-2"></div>
+       <div class="circle-3"></div>
+<!-- arrow -->  
+      <a href="#" class="arrow"><img src="http://static.tumblr.com/5ojoydj/85En3nom4/arrow-fukuo.png"></a>
+ </div>
+ 
+  <!-- content 04 ... -->
+ <div class="image_content">
+    <img src="http://static.tumblr.com/5ojoydj/YR8n3nnp0/image_4.png">
+       <div class="name_content">
+       TYPOGRAPHY
+       </div>
+       <div class="circle-1"></div>
+       <div class="circle-2"></div>
+       <div class="circle-3"></div>
+<!-- arrow -->
+      <a href="#" class="arrow"><img src="http://static.tumblr.com/5ojoydj/85En3nom4/arrow-fukuo.png"></a>
+ </div>
+ 
+  <!-- content 05 ... -->
+ <div class="image_content">
+    <img src="http://static.tumblr.com/5ojoydj/y9wn3ngee/image_1.png">
+       <div class="name_content">
+       CROSS
+       </div>
+       <div class="circle-1"></div>
+       <div class="circle-2"></div>
+       <div class="circle-3"></div>
+<!-- arrow -->
+     <a href="#" class="arrow"><img src="http://static.tumblr.com/5ojoydj/85En3nom4/arrow-fukuo.png"></a>
+ </div>
+ 
+   <!-- content 06 ... -->
+ <div class="image_content">
+    <img src="http://static.tumblr.com/5ojoydj/4iEn3npsb/image_6.png">
+       <div class="name_content">
+       SKY BLUE
+       </div>
+       <div class="circle-1"></div>
+       <div class="circle-2"></div>
+       <div class="circle-3"></div>
+<!-- arrow -->
+     <a href="#" class="arrow"><img src="http://static.tumblr.com/5ojoydj/85En3nom4/arrow-fukuo.png"></a>
+ </div>
+ 
+<!-- YOU CAN ADD AS MANY AS PICTURE -->
+</div><!-- ends -->
+
+ 
+<!--
+
+By Fukuo@Tumblr
+ 
+All content, are made by Faiz Ichsan Jaya, please don't steal, redistribute as your own and claim as yours.
+
+
+-->
+ 
+ 
+</body>
+</html>
